@@ -20,7 +20,11 @@ require("./models/Battle");
 mongoose
   .connect(
     "mongodb+srv://dbUserOne:dbUserOnePassword@cluster0.fn8hj.mongodb.net/fullstackexercise?retryWrites=true&w=majority",
-    { useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true }
+    {
+      useNewUrlParser: true,
+      useFindAndModify: false,
+      useUnifiedTopology: false
+    }
   )
   .then(res => {
     console.log("Database Connected Successfully");
